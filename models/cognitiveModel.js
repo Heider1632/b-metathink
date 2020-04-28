@@ -1,4 +1,5 @@
-import mongoose, {Schema} from 'mongoose';
+const mongoose = require('mongoose');
+const {Schema} = require("mongoose");
 const cognitiveModelSchema = new Schema({
     User: { type: Schema.Types.ObjectId, ref:"User", required: true },
     createdAt: { type: Date, default: Date.now },
@@ -11,4 +12,4 @@ const cognitiveModelSchema = new Schema({
 });
 
 const CognitiveModel = mongoose.model('cognitiveModel',cognitiveModelSchema);
-export default CognitiveModel;
+module.exports = CognitiveModel;

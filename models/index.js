@@ -1,7 +1,7 @@
-import User from './user';
-import CognitiveModel from './cognitiveModel';
+const User = require('./user');
+const CognitiveModel = require('./cognitiveModel');
 
-export default {
+module.exports = {
     User,
     CognitiveModel
 }

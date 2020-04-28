@@ -1,6 +1,6 @@
-import routerx from 'express-promise-router';
-import userController from '../controllers/UserController';
-import auth from '../middlewares/auth';
+const routerx = require('express-promise-router');
+const userController = require('../controllers/UserController');
+const auth = require('../middlewares/auth');
 const router=routerx();
 
 router.post('/add', userController.add);
@@ -12,4 +12,4 @@ router.put('/activate',auth.verifyUser,userController.activate);
 router.put('/deactivate',auth.verifyUser,userController.deactivate);
 router.post('/login', userController.login);
 
-export default router;
+module.exports = router;

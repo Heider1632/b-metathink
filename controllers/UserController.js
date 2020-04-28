@@ -1,8 +1,7 @@
-import models from '../models';
-import bcrypt from 'bcryptjs';
-import token from '../services/token';
-import mongoose from 'mongoose';
-export default {
+const models = require('../models');
+const bcrypt = require('bcryptjs');
+const token = require('../services/token');
+module.exports = {
     add: async (req,res,next) =>{
         try {
             req.body.password = await bcrypt.hash(req.body.password,10);

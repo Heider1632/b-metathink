@@ -1,6 +1,6 @@
-import routerx from 'express-promise-router';
-import CognitiveModelController from '../controllers/CognitiveModelController';
-import auth from '../middlewares/auth';
+const routerx = require('express-promise-router');
+const CognitiveModelController = require('../controllers/CognitiveModelController');
+// import auth from '../middlewares/auth';
 
 const router=routerx();
 
@@ -10,4 +10,4 @@ router.get('/list', CognitiveModelController.list);
 router.put('/update', CognitiveModelController.update);
 router.post('/delete', CognitiveModelController.delete);
 
-export default router;
+module.exports = router;

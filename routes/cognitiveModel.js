@@ -6,6 +6,7 @@ const router=routerx();
 
 router.post('/add', CognitiveModelController.add);
 router.get('/query',CognitiveModelController.query);
+router.get('/validate',CognitiveModelController.validate);
 router.get('/list', CognitiveModelController.list);
 router.put('/update', CognitiveModelController.update);
 router.post('/delete', CognitiveModelController.delete);

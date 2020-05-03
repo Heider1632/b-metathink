@@ -34,11 +34,9 @@ module.exports = {
         try {
             const reg=await models.CognitiveModel.findOne({domain:req.query.name});
             if (!reg){
-                res.status(404).send({
-                    message: 'El modelo cognitivo no existe'
-                });
+                res.status(204);
             } else{
-                res.status(200).json(reg);
+                res.status(200);
             }
         } catch(e){
             res.status(500).send({

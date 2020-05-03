@@ -34,9 +34,13 @@ module.exports = {
         try {
             const reg=await models.CognitiveModel.findOne({domain:req.query.name});
             if (!reg){
-                res.status(204);
+                res.status(200).json({
+                    valid: true
+                });
             } else{
-                res.status(200);
+                res.status(200).json({
+                    valid: false
+                });
             }
         } catch(e){
             res.status(500).send({
